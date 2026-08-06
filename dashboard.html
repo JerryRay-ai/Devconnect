@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevConnect - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <nav>
+        <div class="logo">DevConnect</div>
+
+        <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Open mobile menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="search">
+            <input type="text" placeholder="Search developers, posts...">
+        </div>
+
+        <div class="user">
+            <span id="username"><i class="fa-solid fa-hand-wave"></i> Hi</span>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-search">
+                <input type="text" placeholder="Search developers, posts...">
+            </div>
+            <button class="menu-link" onclick="window.location.href='dashboard.html'">Feed</button>
+            <button class="menu-link" onclick="window.location.href='profile.html'">Profile</button>
+            <button class="menu-link" onclick="alert('Messages coming soon!')">Messages</button>
+            <button class="menu-link" onclick="alert('Groups coming soon!')">Groups</button>
+            <button class="menu-link" onclick="alert('Meetups coming soon!')">Meetups</button>
+            <button class="menu-link" onclick="alert('Settings coming soon!')">Settings</button>
+            <button class="menu-link logout-link" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <!-- MAIN LAYOUT -->
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <ul>
+                <li><i class="fa-solid fa-house"></i> Feed</li>
+                <li onclick="window.location.href='profile.html'"><i class="fa-solid fa-user"></i> Profile</li>
+                <li><i class="fa-solid fa-comment-dots"></i> Messages</li>
+                <li><i class="fa-solid fa-handshake-angle"></i> Groups</li>
+                <li><i class="fa-solid fa-calendar-days"></i> Meetups</li>
+                <li><i class="fa-solid fa-gear"></i> Settings</li>
+            </ul>
+        </aside>
+
+        <!-- FEED -->
+        <main class="feed">
+
+    <!-- CREATE POST -->
+    <div class="post-box">
+        <textarea id="postInput"></textarea>
+        <button onclick="addPost()">Post</button>
+    </div>
+
+    <!-- POSTS DISPLAY AREA (MUST BE HERE) -->
+    <div id="postsContainer"></div>
+
+    <!-- SAMPLE POSTS (optional - remove later) -->
+    <div class="post">
+        <h4>Alex Dev</h4>
+        <p>Just finished building my React portfolio <i class="fa-solid fa-rocket"></i></p>
+        <div class="actions">
+            <span><i class="fa-regular fa-thumbs-up"></i> Like</span>
+            <span><i class="fa-regular fa-comment"></i> Comment</span>
+            <span><i class="fa-regular fa-bookmark"></i> Save</span>
+        </div>
+    </div>
+
+</main>
+
+        <!-- RIGHT PANEL -->
+        <aside class="right">
+
+            <div class="box">
+                <h3>Online Developers</h3>
+                <p><i class="fa-solid fa-circle-check" style="color:#22c55e; margin-right:8px;"></i>John Doe</p>
+                <p><i class="fa-solid fa-circle-check" style="color:#22c55e; margin-right:8px;"></i>Jane Smith</p>
+                <p><i class="fa-solid fa-circle-check" style="color:#22c55e; margin-right:8px;"></i>Mike Johnson</p>
+            </div>
+
+            <div class="box">
+                <h3>Suggested Groups</h3>
+                <p>Frontend Developers</p>
+                <p>Backend Engineers</p>
+                <p>AI Builders</p>
+            </div>
+
+        </aside>
+
+    </div>
+
+</body>
+<script src="dashboard.js"></script>
+
+</html>

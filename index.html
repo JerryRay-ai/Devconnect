@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevConnect</title>
+    <meta name="description" content="DevConnect helps developers find collaborators, share ideas, and build meaningful projects together.">
+    <title>DevConnect - Build with developers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -41,32 +45,62 @@
 
     <!-- Hero Section -->
     <section class="hero">
-
         <div class="hero-text">
-            <h1>Connect With Developers Around The World</h1>
-
-            <p>
-                Join a thriving community of developers, collaborate on projects,
-                share ideas, attend virtual meetups, and grow your skills.
-            </p>
-
+            <div class="eyebrow"><span></span> Built for developers, by developers</div>
+            <h1>Find developers.<br><em>Build together.</em></h1>
+            <p class="hero-copy">Meet skilled builders, discover ambitious projects, and turn ideas into something real with a community that moves as fast as you do.</p>
             <div class="hero-buttons">
-                <a href="register.html" class="primary-btn">
-                    Get Started
-                </a>
-
-                <a href="#features" class="secondary-btn">
-                    Learn More
-                </a>
+                <a href="register.html" class="primary-btn">Join the community <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#features" class="secondary-btn">Explore DevConnect</a>
+            </div>
+            <div class="hero-proof">
+                <div class="avatar-stack" aria-hidden="true">
+                    <span>AM</span><span>JL</span><span>RK</span><span>+9</span>
+                </div>
+                <p><strong>Join an early community</strong><br>of builders and creative technologists</p>
             </div>
         </div>
 
+        <div class="hero-product" aria-label="DevConnect community preview">
+            <div class="product-window">
+                <div class="window-bar"><span></span><span></span><span></span><div class="window-search"><i class="fa-solid fa-magnifying-glass"></i> Search developers</div></div>
+                <div class="product-body">
+                    <aside class="product-sidebar">
+                        <strong class="mini-logo">dev<span>.</span></strong>
+                        <div class="side-item active"><i class="fa-solid fa-house"></i></div>
+                        <div class="side-item"><i class="fa-solid fa-user-group"></i></div>
+                        <div class="side-item"><i class="fa-solid fa-code-branch"></i></div>
+                        <div class="side-item"><i class="fa-solid fa-calendar"></i></div>
+                    </aside>
+                    <div class="product-feed">
+                        <div class="feed-heading"><div><small>Good morning,</small><strong>Amina</strong></div><span class="status-dot"></span></div>
+                        <div class="composer"><div class="mini-avatar">AM</div><span>Share something with the community...</span></div>
+                        <div class="feed-post">
+                            <div class="post-author"><div class="mini-avatar coral">JL</div><div><strong>Jamie Lee</strong><small>Frontend Engineer</small></div><span>12m</span></div>
+                            <p>Looking for two developers to help build an open-source accessibility toolkit.</p>
+                            <div class="post-tags"><span>React</span><span>TypeScript</span><span>Open source</span></div>
+                            <div class="post-actions"><span><i class="fa-regular fa-heart"></i> 48</span><span><i class="fa-regular fa-comment"></i> 12</span></div>
+                        </div>
+                    </div>
+                    <aside class="product-people">
+                        <strong>People to meet</strong>
+                        <div class="person"><div class="mini-avatar yellow">RK</div><div><strong>Ravi K.</strong><small>AI & Python</small></div><button><i class="fa-solid fa-plus"></i></button></div>
+                        <div class="person"><div class="mini-avatar green">SO</div><div><strong>Sofia O.</strong><small>Product Designer</small></div><button><i class="fa-solid fa-plus"></i></button></div>
+                    </aside>
+                </div>
+            </div>
+            <div class="match-card"><div class="match-icon"><i class="fa-solid fa-bolt"></i></div><div><small>New collaborator match</small><strong>92% skill match</strong></div></div>
+            <div class="online-card"><span></span><strong>128</strong><small>builders online</small></div>
+        </div>
     </section>
 
     <!-- Features -->
     <section id="features" class="features">
 
-        <h2>Why Join DevConnect?</h2>
+        <div class="section-heading">
+            <div><span class="section-label">Everything you need to grow</span><h2>From first idea to shipped product.</h2></div>
+            <p>DevConnect brings the people, conversations, and opportunities together in one focused workspace.</p>
+        </div>
 
         <div class="feature-grid">
 
@@ -104,27 +138,10 @@
 
     <!-- Stats -->
     <section id="community" class="stats">
-
-        <div class="stat-card">
-            <h3>0</h3>
-            <p>Developers</p>
-        </div>
-
-        <div class="stat-card">
-            <h3>0</h3>
-            <p>Projects</p>
-        </div>
-
-        <div class="stat-card">
-            <h3>0</h3>
-            <p>Meetups</p>
-        </div>
-
-        <div class="stat-card">
-            <h3>24/7</h3>
-            <p>Community Support</p>
-        </div>
-
+        <div class="stats-intro"><span class="section-label">One connected community</span><h2>Grow alongside people who get it.</h2></div>
+        <div class="stat-card"><span>01</span><h3>One feed</h3><p>Ideas, progress, and opportunities in one place.</p></div>
+        <div class="stat-card"><span>02</span><h3>Real skills</h3><p>Find people by the technologies and goals you share.</p></div>
+        <div class="stat-card"><span>03</span><h3>Better builds</h3><p>Turn isolated work into meaningful collaboration.</p></div>
     </section>
 
     <!-- CTA -->

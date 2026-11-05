@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevConnect - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -13,7 +16,7 @@
 
     <!-- TOP NAV -->
     <nav>
-        <div class="logo">DevConnect</div>
+        <a href="index.html" class="logo">DevConnect</a>
 
         <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Open mobile menu">
             <i class="fa-solid fa-bars"></i>
@@ -24,8 +27,8 @@
         </div>
 
         <div class="user">
-            <span id="username"><i class="fa-solid fa-hand-wave"></i> Hi</span>
-            <button onclick="logout()" class="logout-btn">Logout</button>
+            <span id="username"><i class="fa-solid fa-hand-wave"></i> <span id="usernameName">Hi</span></span>
+            <button type="button" onclick="logout()" class="logout-btn">Logout</button>
         </div>
 
         <div class="mobile-menu" id="mobileMenu">
@@ -47,13 +50,18 @@
 
         <!-- SIDEBAR -->
         <aside class="sidebar">
+            <div class="sidebar-label">Workspace</div>
             <ul>
-                <li><i class="fa-solid fa-house"></i> Feed</li>
+                <li class="active"><i class="fa-solid fa-house"></i> Feed</li>
                 <li onclick="window.location.href='profile.html'"><i class="fa-solid fa-user"></i> Profile</li>
-                <li><i class="fa-solid fa-comment-dots"></i> Messages</li>
-                <li><i class="fa-solid fa-handshake-angle"></i> Groups</li>
+                <li><i class="fa-solid fa-comment-dots"></i> Messages <span class="badge">3</span></li>
+                <li><i class="fa-solid fa-handshake-angle"></i> Collaborations</li>
                 <li><i class="fa-solid fa-calendar-days"></i> Meetups</li>
-                <li><i class="fa-solid fa-gear"></i> Settings</li>
+            </ul>
+            <div class="sidebar-label secondary-label">Discover</div>
+            <ul>
+                <li><i class="fa-solid fa-code"></i> Projects</li>
+                <li><i class="fa-solid fa-users"></i> Communities</li>
             </ul>
         </aside>
 
@@ -62,9 +70,14 @@
 
     <!-- CREATE POST -->
     <div class="post-box">
-        <textarea id="postInput"></textarea>
-        <button onclick="addPost()">Post</button>
-    </div>
+        <div class="post-author-avatar">DC</div>
+        <div class="composer-field">
+            <textarea id="postInput" aria-label="Create a post" placeholder="Share an idea, update, or opportunity..."></textarea>
+            <div class="composer-actions">
+                <div class="composer-tools"><span><i class="fa-solid fa-image"></i> Media</span><span><i class="fa-solid fa-code"></i> Code</span></div>
+                <button onclick="addPost()">Publish post <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
 
     <!-- POSTS DISPLAY AREA (MUST BE HERE) -->
     <div id="postsContainer"></div>
@@ -85,18 +98,25 @@
         <!-- RIGHT PANEL -->
         <aside class="right">
 
-            <div class="box">
-                <h3>Online Developers</h3>
-                <p><i class="fa-solid fa-circle-check" style="color:#22c55e; margin-right:8px;"></i>John Doe</p>
-                <p><i class="fa-solid fa-circle-check" style="color:#22c55e; margin-right:8px;"></i>Jane Smith</p>
-                <p><i class="fa-solid fa-circle-check" style="color:#22c55e; margin-right:8px;"></i>Mike Johnson</p>
+            <div class="box people-box">
+                <div class="box-heading"><h3>People to know</h3><button>See all</button></div>
+                <div class="suggested-person"><div class="person-avatar green-avatar">JD</div><div><strong>John Doe</strong><small>Frontend · React</small></div><button aria-label="Connect with John Doe"><i class="fa-solid fa-plus"></i></button></div>
+                <div class="suggested-person"><div class="person-avatar coral-avatar">JS</div><div><strong>Jane Smith</strong><small>Backend · Python</small></div><button aria-label="Connect with Jane Smith"><i class="fa-solid fa-plus"></i></button></div>
+                <div class="suggested-person"><div class="person-avatar gold-avatar">MJ</div><div><strong>Mike Johnson</strong><small>AI · ML</small></div><button aria-label="Connect with Mike Johnson"><i class="fa-solid fa-plus"></i></button></div>
             </div>
 
-            <div class="box">
-                <h3>Suggested Groups</h3>
-                <p>Frontend Developers</p>
-                <p>Backend Engineers</p>
-                <p>AI Builders</p>
+            <div class="box opportunities-box">
+                <span class="box-label">Open opportunity</span>
+                <h3>Build open-source together</h3>
+                <p>6 developers are looking for a React collaborator.</p>
+                <button>View projects <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="box community-box">
+                <h3>Trending communities</h3>
+                <p><i class="fa-solid fa-hashtag"></i> frontend-builders</p>
+                <p><i class="fa-solid fa-hashtag"></i> ai-for-good</p>
+                <p><i class="fa-solid fa-hashtag"></i> open-source</p>
             </div>
 
         </aside>
